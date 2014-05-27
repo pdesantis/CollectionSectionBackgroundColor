@@ -17,6 +17,8 @@
 static NSString *const CellReuseIdentifier = @"CoolCell";
 static NSString *const BackgroundReuseIdentifier = @"CoolBackground";
 
+static int baseNumberOfItems = 1;
+
 @implementation RootViewController
 
 - (instancetype)init
@@ -47,7 +49,7 @@ static NSString *const BackgroundReuseIdentifier = @"CoolBackground";
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return (4 * (section + 1));
+    return (baseNumberOfItems * (section + 1));
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -79,6 +81,15 @@ static NSString *const BackgroundReuseIdentifier = @"CoolBackground";
     }
 
     return view;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    baseNumberOfItems++;
+    if (baseNumberOfItems > 10) {
+        baseNumberOfItems = 1;
+    }
+    [self.collectionView reloadData];
 }
 
 @end

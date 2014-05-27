@@ -72,7 +72,7 @@ NSString *const IDEOCollectionElementKindSectionBackground = @"IDEOCollectionEle
     }
 
     // Iterate through the items and find the max width & height
-    for (int i = (items - 1); i >= 0; i--) {
+    for (NSInteger i = (items - 1); i >= 0; i--) {
         NSIndexPath *indexPath = [NSIndexPath indexPathForItem:i inSection:section];
         UICollectionViewLayoutAttributes *currentCellAttributes = [self layoutAttributesForItemAtIndexPath:indexPath];
         maxWidth = MAX(maxWidth, CGRectGetMaxX(currentCellAttributes.frame));
@@ -90,6 +90,9 @@ NSString *const IDEOCollectionElementKindSectionBackground = @"IDEOCollectionEle
 
     // Position the view behind the others
     attributes.zIndex = -1;
+
+    // Cache these background attributes
+    self.backgroundAttributes[indexPath] = attributes;
 
     return attributes;
 }
