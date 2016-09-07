@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA28E1C41D7FAD4500930923 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA28E1C31D7FAD4500930923 /* Launch Screen.storyboard */; };
 		FA2915C8192DD450004A2ECE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA2915C7192DD450004A2ECE /* Foundation.framework */; };
 		FA2915CA192DD450004A2ECE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA2915C9192DD450004A2ECE /* CoreGraphics.framework */; };
 		FA2915CC192DD450004A2ECE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA2915CB192DD450004A2ECE /* UIKit.framework */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA28E1C31D7FAD4500930923 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		FA2915C4192DD450004A2ECE /* CollectionSectionBackgroundColor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollectionSectionBackgroundColor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA2915C7192DD450004A2ECE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FA2915C9192DD450004A2ECE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -126,6 +128,7 @@
 				FA2915FA192DD49D004A2ECE /* SectionColorLayout.m */,
 				FA2915D9192DD450004A2ECE /* Images.xcassets */,
 				FA2915CE192DD450004A2ECE /* Supporting Files */,
+				FA28E1C31D7FAD4500930923 /* Launch Screen.storyboard */,
 			);
 			path = CollectionSectionBackgroundColor;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA28E1C41D7FAD4500930923 /* Launch Screen.storyboard in Resources */,
 				FA2915D2192DD450004A2ECE /* InfoPlist.strings in Resources */,
 				FA2915DA192DD450004A2ECE /* Images.xcassets in Resources */,
 			);

@@ -42,9 +42,17 @@ static int baseNumberOfItems = 1;
     [self.collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:IDEOCollectionElementKindSectionBackground withReuseIdentifier:BackgroundReuseIdentifier];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+
+    SectionColorLayout *layout = (SectionColorLayout *)self.collectionViewLayout;
+    layout.itemSize = CGSizeMake(self.view.frame.size.width, 50);
+}
+
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
-    return 5;
+    return 10;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
@@ -75,6 +83,23 @@ static int baseNumberOfItems = 1;
             view.backgroundColor = [UIColor redColor];
             break;
         case 4:
+            view.backgroundColor = [UIColor grayColor];
+            break;
+        case 5:
+            view.backgroundColor = [UIColor brownColor];
+            break;
+        case 6:
+            view.backgroundColor = [UIColor purpleColor];
+            break;
+        case 7:
+            view.backgroundColor = [UIColor darkGrayColor];
+            break;
+        case 8:
+            view.backgroundColor = [UIColor blueColor];
+            break;
+        case 9:
+            view.backgroundColor = [UIColor yellowColor];
+            break;
         default:
             view.backgroundColor = [UIColor lightGrayColor];
             break;
@@ -85,11 +110,7 @@ static int baseNumberOfItems = 1;
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    baseNumberOfItems++;
-    if (baseNumberOfItems > 10) {
-        baseNumberOfItems = 1;
-    }
-    [self.collectionView reloadData];
+    
 }
 
 @end
